@@ -1,0 +1,73 @@
+.otp-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1); /* glass effect */
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.otp-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff7f50;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.otp-email {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #f0f0f5;
+}
+
+.otp-form input {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.otp-form input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.otp-form input:focus {
+  border-color: #ff7f50;
+  box-shadow: 0 0 10px rgba(255,127,80,0.4);
+  background: rgba(255,255,255,0.2);
+}
+
+.otp-form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff7f50, #ff5722);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.otp-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #ff5722, #ff7f50);
+}
+
+.otp-error {
+  color: #ff4d4f;
+  margin-top: 15px;
+  font-weight: 500;
+}

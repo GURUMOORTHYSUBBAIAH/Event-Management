@@ -1,0 +1,112 @@
+/* General container */
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: inherit;
+  top: -10%;
+  left: -10%;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ff7f50;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.hero-buttons button {
+  margin: 0 15px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ff7f50;
+  color: #fff;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.hero-buttons button:hover {
+  transform: translateY(-5px);
+  background: #ff5722;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.features-section {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('f6cf4244-b50f-4806-b165-29d35a4db47e.png') no-repeat center/cover;
+  text-align: center;
+  color: #fff;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.features-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1); /* glass effect */
+  backdrop-filter: blur(10px);
+  padding: 30px 20px;
+  border-radius: 20px;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+  color: #ff6ec7; /* vibrant accent */
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #f0f0f5;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}

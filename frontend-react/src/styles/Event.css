@@ -1,0 +1,115 @@
+/* Container */
+.container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #1a1a1a; /* Dark background */
+}
+
+/* Heading */
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff7f50;
+  text-align: center;
+}
+
+/* No events message */
+.no-events {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Individual Card */
+.card {
+  background: rgba(255, 255, 255, 0.1); /* glass effect */
+  backdrop-filter: blur(10px);
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Event title */
+.event-title {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ff7f50;
+}
+
+/* Event details */
+.card p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* Register button */
+.button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #ff7f50;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  background-color: #ff5722;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+}
+/* Heading (h1) */
+h1, .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff6600; /* vibrant coral */
+  text-align: center;
+}
+
+/* Paragraph (p) */
+p, .card p {
+  font-size: 1rem;
+  color: #ff6600; /* soft off-white for readability */
+  line-height: 1.6;
+}
+

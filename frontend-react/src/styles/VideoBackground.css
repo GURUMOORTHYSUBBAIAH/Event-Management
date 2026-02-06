@@ -1,0 +1,16 @@
+.video-background {
+  position: fixed;   /* stay behind everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;       /* behind content */
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover the entire screen */
+  filter: brightness(0.6); /* darken video for better text visibility */
+}
