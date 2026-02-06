@@ -27,9 +27,18 @@ const Events = () => {
               <p>
                 <strong>Deadline:</strong> {event.deadline}
               </p>
+
               <button
                 className="button"
-                onClick={() => navigate(`/register?eventId=${event.id}`)}
+                onClick={() => {
+                  if (event.registerUrl) {
+                    // If admin has provided a URL, open it
+                    window.open(event.registerUrl, "_blank");
+                  } else {
+                    // Default route for your app
+                    navigate(`/register?eventId=${event.id}`);
+                  }
+                }}
                 disabled={event.seats === 0}
               >
                 {event.seats === 0 ? "Full" : "Register"}

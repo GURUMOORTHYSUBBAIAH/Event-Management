@@ -10,6 +10,7 @@ const Admin = () => {
     time: "",
     seats: "",
     deadline: "",
+    registerUrl: "", // new optional URL field
   });
 
   const handleChange = (e) =>
@@ -17,9 +18,22 @@ const Admin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addEvent(event);
+
+    // Convert seats to number
+    const newEvent = { ...event, seats: Number(event.seats) };
+
+    addEvent(newEvent);
     alert("Event Created ✅");
-    setEvent({ title: "", date: "", time: "", seats: "", deadline: "" });
+
+    // Reset form
+    setEvent({
+      title: "",
+      date: "",
+      time: "",
+      seats: "",
+      deadline: "",
+      registerUrl: "",
+    });
   };
 
   return (
@@ -33,8 +47,20 @@ const Admin = () => {
           onChange={handleChange}
           required
         />
-        <input type="date" name="date" value={event.date} onChange={handleChange} required />
-        <input type="time" name="time" value={event.time} onChange={handleChange} required />
+        <input
+          type="date"
+          name="date"
+          value={event.date}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="time"
+          name="time"
+          value={event.time}
+          onChange={handleChange}
+          required
+        />
         <input
           type="number"
           name="seats"
@@ -43,7 +69,21 @@ const Admin = () => {
           onChange={handleChange}
           required
         />
-        <input type="date" name="deadline" value={event.deadline} onChange={handleChange} required />
+        <input
+          type="date"
+          name="deadline"
+          value={event.deadline}
+          onChange={handleChange}
+          required
+        />
+        {/* Optional Register URL */}
+        <input
+          type="text"
+          name="registerUrl"
+          placeholder="Optional External Register URL"
+          value={event.registerUrl}
+          onChange={handleChange}
+        />
         <button type="submit">Create Event</button>
       </form>
     </div>
